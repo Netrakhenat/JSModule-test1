@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Rock Paper Scissor</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="scoreBoard">
+        <div class="title">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSORS</p>
+        </div>
+        <div id="PCboard">
+            <p>Computer <br> Score</p>
+            <p id="PCscore"></p>
+        </div>
+        <div id="Playerboard" style="left: 641px;">
+            <p>Your <br> Score</p>
+            <p id="player-score"></p>
+        </div>
+    </div>
+
+    <div class="msg">
+        <p class="player-choice">You Picked</p>
+        <p class="PC-choice">PC Picked</p>
+    </div>
+
+    <div id="choices">
+        <div class="upper">
+            <div class="rock user" onclick="pickedHand('rock')">
+                <img src="images/rock.png" alt="" />
+            </div>
+            <div class="triangle" id="line-top"></div>
+            <div class="scissors user" onclick="pickedHand('scissors')" style="border-color:#BD00FF; left: 713px;">
+                <img src="images/scissor.png" alt="" />
+            </div>
+        </div>
+        <div class="middle">
+            <div class="triangle" id="line-left"></div>
+            <div class="triangle" id="line-right"></div>
+        </div>
+        <div class="lower">
+            <div class="paper user" onclick="pickedHand('paper')">
+                <img src="images/paper.png" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div id="after-pick">
+        <div class="left-div">
+            <img id="player-choice-img" src="images/rock.png"/>
+        </div>
+        <div id="youwin-msg">
+            <p class="para-1">YOU WIN</p>
+            <p class="para-2">AGAINST PC</p>
+            <div id="play-again-button" onclick="playAgain()">
+                <p>PLAY AGAIN</p>
+            </div>
+        </div>
+
+        <div id="youlose-msg">
+            <p class="para-1">YOU LOST</p>
+            <p class="para-2">AGAINST PC</p>
+            <div id="play-again-button" onclick="playAgain()">
+                <p>PLAY AGAIN</p>
+            </div>
+        </div>
+    
+        <div id="tie-msg">
+            <p class="para-1">TIE UP</p>
+            <div id="replay-button">
+                <p>REPLAY</p>
+            </div>
+        </div>
+        <div class="right-div">
+            <img id="PC-choice-img" src="images/scissor.png"/>
+        </div>
+    </div>
+
+    <div id="nextButton">
+        <p>NEXT</p>
+    </div>
+
+    <div class="rulesButton">
+        <button onclick="displayRules()">RULES </button>
+    </div>
+    <DIV CLASS="rules" styles="display:none;">
+        <div id="pop-up">
+            <div id="exitbutton">
+                <img src="images/X.png" id="x-button" />
+                <!-- <button style="background-color: red;"><img src="images/X.png"/></button> -->
+            </div>
+            <div id="rule-list">
+                <p>Game Rules</p>
+                <div class="list">
+                    <ul>
+                        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                            paper, scissors.”</li>
+                        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                        <li>If both players lay down the same hand, each player lays down another hand</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </DIV>
+    <script src="JS/scripts.js"></script>
+</body>
+
+</html>

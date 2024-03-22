@@ -1,0 +1,373 @@
+body{
+    background-color:#8cc461;
+    position: relative;
+    margin:0px;
+}
+.scoreBoard{
+    width: 800px; 
+    height:158px;
+    position: absolute;
+    top:62px;
+    left: 240px;
+    display:flex;
+    border: solid 2px white;
+    border-radius:13px;
+}
+.title>p{
+    color:white;
+    font-size: 40px;
+    height:37px;
+    margin:9px;
+    font-family: Roboto;
+}
+#PCboard,#Playerboard{
+    width: 139px;
+    height: 128px; 
+    background-color:white;
+    text-align:center;
+    position: absolute;
+    top: 15px;
+    left: 473px;
+    border-radius: 9px;
+}
+#PCboard>p,#Playerboard>p{
+    font-size: 17px;
+    color: #656565; 
+    font-family: Roboto;
+}
+
+.msg{
+    width: 634px; 
+    height: 16px;
+    display:flex;
+    justify-content:space-between;
+    position: absolute;
+    top: 344px;
+    left: 333px;
+    display: none;
+}
+
+.msg p{
+    margin:0px;
+    font-size: 17px;
+    color: white;
+    margin-right:30px;
+    display: none;
+}
+
+#choices{
+    display:flex;
+}
+.user, .PC{
+    display: flex;
+    align-items:center;
+}
+.paper{
+    width: 110px;
+    height: 110px;
+    cursor:pointer;
+    background-color: white;
+    position:absolute;
+    top: 533px;
+    left: 595px;
+    border: solid 16px #FFA943;
+    border-radius:50%;
+    z-index: 1;
+}
+.paper>img{
+    margin: 0px 0px 0px 19px;
+}
+
+.rock, .scissors{
+    width: 110px;
+    height: 110px;
+    cursor:pointer;
+    background-color: white;
+    position:absolute;
+    top:329px;
+    left: 477px;
+    border: solid 16px #0074B6;
+    border-radius:50%;
+    z-index: 1;
+}
+.rock>img{
+    margin: 0px 0px 0px 15px;     /*22px*/
+}
+.scissors>img{
+    margin: 0px 0px 0px 39px;
+}
+
+.triangle{
+    height:0px;
+    display:flex;
+}
+#line-top{
+    width: 133px;
+    position: absolute;
+    top: 393px;
+    left: 582px;
+    border: 10px solid #000000A3;
+    /* display:block; */
+}
+#line-left{
+    width: 107.91px;
+    position: absolute;
+    top: 486px;
+    left: 538px;
+    border: 10px solid #000000A3;
+    transform:rotate(60.58deg);
+}
+#line-right{
+    width: 107.91px;
+    position: absolute;
+    top: 489px;
+    left: 669.96px;
+    border: 10px solid #000000A3;
+    transform:rotate(120deg);
+}
+/* YOU WIN MESSAGE */
+#after-pick{
+    display: none;
+}
+.left-div{
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    position:absolute;
+    top:415px;
+    left:323px;
+    border-radius:50%;
+    border:solid 16px pink;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.right-div{
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    position:absolute;
+    top:415px;
+    left:847px;
+    border-radius:50%;
+    border:solid 16px pink;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#youwin-msg{
+    width: 183px;
+    height: 87px;
+    position: absolute;
+    top: 454px;
+    left: 563px;
+    display: none;
+    flex-direction:column; 
+}
+#youwin-msg .para-1{
+    width: 183px;
+    color: white;
+    font: 800 39px Roboto;
+    margin:0px;
+    text-align: center;
+}
+#youwin-msg .para-2{
+    color: white;
+    font: 800 25px Roboto;
+    margin:0px;
+    text-align:center;
+}
+#play-again-button{
+    width: 174px;
+    height: 44px;
+    background-color: white;
+    border-radius: 9px; 
+    margin: 10px 0px 0px 7px;
+    text-align:center;
+}
+#play-again-button p{
+    color:#6B6B6B;
+    text-align:center;
+    margin:0px;
+    padding: 13px; 
+    font: 600 15px Roboto;
+}
+/* YOU LOSE MESSAGE */
+#youlose-msg{
+    width: 183px;
+    height: 87px;
+    position: absolute;
+    top: 454px;
+    left: 563px;
+    display:none;
+    flex-direction:column;
+}
+#youlose-msg .para-1{
+    width: 183px;
+    color: white;
+    font: 800 39px Roboto;
+    margin:0px;
+    text-align: center;
+}
+#youlose-msg .para-2{
+    color: white;
+    font: 800 25px Roboto;
+    margin:0px;
+    text-align:center;
+}
+#play-again-button{
+    width: 174px;
+    height: 44px;
+    background-color: white;
+    border-radius: 9px; 
+    margin: 10px 0px 0px 7px;
+    text-align:center;
+}
+#play-again-button p{
+    color:#6B6B6B;
+    text-align:center;
+    margin:0px;
+    padding: 13px; 
+    font: 600 15px Roboto;
+}
+/* TIE MESSAGE */
+#tie-msg{
+    width: 183px;
+    height: 87px;
+    position: absolute;
+    top: 454px;
+    left: 563px;
+    display: none;
+    flex-direction:column;
+}
+#tie-msg .para-1{
+    width: 183px;
+    color: white;
+    font: 800 39px Roboto;
+    margin:0px;
+    text-align: center;
+}
+#replay-button{
+    width: 174px;
+    height: 44px;
+    background-color: white;
+    border-radius: 9px; 
+    margin: 40px 0px 0px 7px;
+    text-align:center;
+}
+#replay-button p{
+    color:#6B6B6B;
+    text-align:center;
+    margin:0px;
+    padding: 13px; 
+    font: 600 15px Roboto;
+}
+/* NEXT BUTTON */
+#nextButton{
+    width: 119px;
+    height: 40px;
+    opacity: 1;
+    text-align:center;
+    color: white;
+    position: absolute;
+    top: 657px;
+    left: 1136px;
+    border: white solid 2px;
+    border-radius: 10px;
+    display:none;
+    justify-content:center;
+}
+#nextButton p{
+    margin:8px 0px 0px 0px;
+    font: 600 21px Roboto;
+}
+
+/* RULES BUTTON */
+.rulesButton{
+    width: 119px;
+    height: 40px;
+    opacity: 1;
+    text-align:center;
+    position: absolute;
+    top: 657px;
+    left: 1136px;
+    border: white solid 2px;
+    border-radius: 10px;
+}
+
+.rulesButton button{
+    background-color: #8cc461; 
+    font: 600 21px Roboto;
+    color: white;
+    border:none;
+    margin:8px 0px;
+    padding: 0px;
+}
+/* RULES POPUP */
+#pop-up{
+    width: 303px;
+    height: 367px;
+    position:fixed;
+    top:288px;
+    left: 964px;
+    display: none;  /*to hide whole rules board */
+}
+
+#rule-list{
+    width: 278px;
+    height: 325px;
+    background-color: #004429;
+    border: solid 7px white;
+    border-radius:13px;
+    /* position: absolute; */
+    Top:330px;
+    Left:964px; 
+}
+#rule-list p{
+    color: white;
+    font: 29px Roboto;
+    text-align:center;
+    margin: 20px;
+}
+ul{
+    margin:0px;
+    padding:0px 20px 0px 35px;
+    list-style-type:square;
+}
+li::marker {
+    color: yellow; /*To change the color of bullet*/
+    font-size: 8px; /*To change the size of the bullet*/
+  }
+li{
+    color:white;
+    font-size: 13px;
+    font-family: Roboto;
+}
+li + li {
+    margin-top: 10px;
+  }
+  
+#div-header{
+    display:flex;
+}
+#exitbutton{
+    width: 50px;
+    height: 50px;
+    background-color:red;
+    border: solid white 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 263px;
+    left:1217px;
+}
+#exitbutton img{
+    border-radius: 50%;
+}
+
+/* AFTER JAVASCRIT STYLES */
+.show{
+    top: 415px;
+    left: 323px;
+}
